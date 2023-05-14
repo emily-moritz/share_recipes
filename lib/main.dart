@@ -129,14 +129,13 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-  return Scaffold(
+    return Scaffold(
       appBar: AppBar(
         title: const Text("Meine Rezepte"),
         centerTitle: true,
       ),
       body: Center(
-        children: <Widget>[
-          Align(
+        /*child: Align(
           alignment: Alignment(0.85, 0.95),
           child: ElevatedButton(
             onPressed: () {}, 
@@ -145,29 +144,27 @@ class _MyHomePageState extends State<MyHomePage> {
               shape: const CircleBorder(),
             ),
             child: const Text(
-              'Rezept hinzufügen',
+              '+',
               style: TextStyle(fontSize: 24),
             )
           )
-        ),
-        ListView(
-          children: [
-            for(int i = 0; i < allinfos.length; i++)
-              ListTile(
-                title: Text(allinfos[i].title),
-                subtitle: Text(allinfos[i].description),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => ReciptScreen(id: i)),
-                  );
-                },
-              ),
-          ],
-        )
-        ]
+        ),*/
+        child: ListView(
+        children: [
+          for(int i = 0; i < allinfos.length; i++)
+            ListTile(
+              title: Text(allinfos[i].title),
+              subtitle: Text(allinfos[i].description),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ReciptScreen(id: i)),
+                );
+              },
+            ),
+        ],
       )
-    );
+    ));
   }
 }
 
@@ -217,7 +214,7 @@ class ReciptScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children:[
                 Row(children:[
-                  Text("Zutaten:")   
+                  Text("Zutaten:")
                 ])
               ]
             ),
