@@ -45,6 +45,7 @@ class MyApp extends StatelessWidget { //erbt von StatelessWidget
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.pink,
+        scaffoldBackgroundColor: Color.fromARGB(255, 252, 225, 236)
       ),
       home: MyHomePage(title: 'Meine Rezepte'),
     );
